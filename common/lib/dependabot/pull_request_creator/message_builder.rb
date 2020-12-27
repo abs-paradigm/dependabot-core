@@ -44,8 +44,10 @@ module Dependabot
       end
 
       def pr_message
-        suffixed_pr_message_header + commit_message_intro + \
-          metadata_cascades + prefixed_pr_message_footer
+        commit_message_intro + metadata_links + prefixed_pr_message_footer
+
+        #suffixed_pr_message_header + commit_message_intro + \
+        #  metadata_cascades + prefixed_pr_message_footer
       end
 
       def commit_message
